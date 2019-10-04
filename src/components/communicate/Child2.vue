@@ -26,7 +26,9 @@ export default {
         }
     },
     mounted(){
-
+    this.$bus.$on("event-bus", msg => {
+      this.msg = "接收event-bus消息child2:" + msg;
+    });
         this.$on("dispatch",msg=>{
             this.msg = '接收dispatch消息:'+ msg
         })

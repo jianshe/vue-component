@@ -9,7 +9,7 @@ export default function create(Component, props) {
             // h(Component) => vdom
             return h(Component, {props})
         }
-    }).$mount() // 先渲染不挂载
+    }).$mount(); // 先渲染不挂载
 
     // 方式2：Vue.extend() 返回组件构造函数
     // const Ctor = Vue.extend(Component)
@@ -17,16 +17,16 @@ export default function create(Component, props) {
     // document.body.appendChild(comp.$el)
 
     // 获取dom
-    document.body.appendChild(vm.$el)
+    document.body.appendChild(vm.$el);
 
     // 2. 挂载
     const comp = vm.$children[0];
 
     // 3. 销毁
     comp.remove = () => {
-        document.body.removeChild(vm.$el)
-        vm.$destroy()
-    }
+        document.body.removeChild(vm.$el);
+        vm.$destroy();
+    };
 
-    return comp
+    return comp;
 }

@@ -1,12 +1,12 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>{{$attrs.foo}}</p>
+    <p>{{$attrs.foo}}</p> <!-- 子类可以通过$attrs获取父类传给子类的属性值 -->
     <p>{{xx}}</p>
     <p>{{something}}</p>
     <p><slot></slot></p>
     <p>
-      <slot name="content" :xx="xx"></slot>
+      <slot name="content" :xx="xx"></slot> <!-- 分发内容要用到子组件中的数据 -->
     </p>
   </div>
 </template>

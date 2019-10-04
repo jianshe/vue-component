@@ -1,14 +1,14 @@
 <template>
   <div id="app">
-    <KFormTest></KFormTest>
-    <img alt="Vue logo" src="./assets/logo.png" />
-    
-    <HelloWorld msg="Welcome to Your Vue.js App" foo="foo"
-      ref="hw"/>
-    <!-- <template v-slot:default>abc</template>-->
-    <!-- <template v-slot:content="slotProps">content...{{slotProps.xx}}</template> -->
-    <!-- <template v-slot:content="{xx}">content...{{xx}}</template>
-    </HelloWorld>-->
+    <Tree></Tree>
+    <!-- <KFormTest></KFormTest> -->
+    <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App" foo="foo"
+      ref="hw">
+    <template v-slot:default>abc</template>
+    <template v-slot:contnet="slotProps">content...{{slotProps.xx}}</template>
+    <template v-slot:content="{xx}">content...{{xx}}</template>
+    </HelloWorld> -->
     <!-- 组件通信 -->
     <!-- <Communicate></Communicate> -->
     <!-- 插槽 -->
@@ -19,8 +19,9 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-// import Communicate from "@/components/communicate";
+// import HelloWorld from "./components/HelloWorld.vue";
+import Communicate from "@/components/communicate";
+import Tree from "@/components/tree"
 // import SlotTest from "@/components/slots";
 // import Recursion from "@/components/recursion";
 // import KFormTest from "@/components/form";
@@ -33,11 +34,11 @@ export default {
     };
   },
   components: {
-    HelloWorld
+    Tree
   },
   mounted() {
-    // this.$refs.hw.xx = "xxx";
-    // this.$children[0].xx = "xxxxx";
+    // this.$refs.hw.xx = "xxx"; // 修改子类中data对象中定义的属性。
+    // this.$children[0].xx = "xxxxx"; // 修改子类中data对象中定义的属性。
   }
 };
 </script>

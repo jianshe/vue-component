@@ -25,5 +25,5 @@ export default {
     $boardcast: function(eventName, data) {
       boardcast.call(this, eventName, data);
     },
-  },
+  }
 };
